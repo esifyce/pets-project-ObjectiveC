@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Insta Twit View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="InstaTwitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i9r-at-zbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="0bl-bf-sJY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="InstaTwit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45s-0d-bKh">
+                                <rect key="frame" x="133.5" y="53" width="147" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-We-9co">
+                                <rect key="frame" x="20" y="129" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I'm..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfO-Co-PMk">
+                                <rect key="frame" x="19" y="171" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="...and feeling..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il7-Bt-RuF">
+                                <rect key="frame" x="282.5" y="171" width="111.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="...about it." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0x-3v-vnb">
+                                <rect key="frame" x="169" y="441" width="76.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-KA-cZa">
+                                <rect key="frame" x="80" y="125" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="2" eventType="editingDidEndOnExit" id="VyL-5V-78n"/>
+                                </connections>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxh-T3-8Ow">
+                                <rect key="frame" x="20" y="217" width="374" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="sGL-uO-nzj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="T0A-rW-fyQ"/>
+                                    <outlet property="delegate" destination="2" id="i1E-V2-4Ks"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKf-Df-AST">
+                                <rect key="frame" x="40" y="495" width="334" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetButtonTapped:" destination="2" eventType="touchUpInside" id="yRH-Km-tp0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oxh-T3-8Ow" firstAttribute="top" secondItem="QfO-Co-PMk" secondAttribute="bottom" constant="25" id="02a-nO-MZL"/>
+                            <constraint firstItem="il7-Bt-RuF" firstAttribute="baseline" secondItem="QfO-Co-PMk" secondAttribute="baseline" id="0bk-UT-tVQ"/>
+                            <constraint firstAttribute="trailing" secondItem="V7b-KA-cZa" secondAttribute="trailing" constant="20" id="6FR-hy-TfI"/>
+                            <constraint firstItem="0lD-We-9co" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="6Fo-2a-xA8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vKf-Df-AST" secondAttribute="trailing" constant="20" id="F97-14-xC6"/>
+                            <constraint firstAttribute="trailing" secondItem="oxh-T3-8Ow" secondAttribute="trailing" constant="20" id="GNO-mh-KBt"/>
+                            <constraint firstItem="45s-0d-bKh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="53" id="JDK-Ff-0Mh"/>
+                            <constraint firstItem="oxh-T3-8Ow" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" id="Lyc-j9-930"/>
+                            <constraint firstItem="T0x-3v-vnb" firstAttribute="top" secondItem="oxh-T3-8Ow" secondAttribute="bottom" constant="8" symbolic="YES" id="Nhf-KS-kcU"/>
+                            <constraint firstAttribute="trailing" secondItem="il7-Bt-RuF" secondAttribute="trailing" constant="20" symbolic="YES" id="OCp-k9-XBm"/>
+                            <constraint firstItem="vKf-Df-AST" firstAttribute="leading" secondItem="3" secondAttribute="leadingMargin" constant="20" id="Rss-f1-qva"/>
+                            <constraint firstItem="V7b-KA-cZa" firstAttribute="leading" secondItem="0lD-We-9co" secondAttribute="trailing" constant="10" id="UQQ-Pf-ZaV"/>
+                            <constraint firstItem="0lD-We-9co" firstAttribute="top" secondItem="3" secondAttribute="top" constant="129" id="aDN-h6-Bb1"/>
+                            <constraint firstItem="QfO-Co-PMk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="171" id="cHa-Oa-nID"/>
+                            <constraint firstItem="45s-0d-bKh" firstAttribute="centerX" secondItem="T0x-3v-vnb" secondAttribute="centerX" id="ccR-dV-Rr6"/>
+                            <constraint firstItem="vKf-Df-AST" firstAttribute="top" secondItem="T0x-3v-vnb" secondAttribute="bottom" constant="33" id="eDE-KM-9rb"/>
+                            <constraint firstItem="V7b-KA-cZa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="125" id="o3Z-Cr-sii"/>
+                            <constraint firstItem="45s-0d-bKh" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="snL-uU-qFK"/>
+                            <constraint firstItem="QfO-Co-PMk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="19" id="wKp-d9-yp8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notesField" destination="V7b-KA-cZa" id="f9u-Ov-vaZ"/>
+                        <outlet property="tweetPicker" destination="oxh-T3-8Ow" id="JJi-Xe-dVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.17391304347831" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
